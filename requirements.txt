@@ -1,0 +1,7 @@
+Flask
+gunicorn
+pyyaml
+tensorflow
+tensorflow-datasets
+matplotlib
+-e .
