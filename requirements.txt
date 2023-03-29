@@ -1,6 +1,10 @@
 Flask
 gunicorn
 pyyaml
+dill
+uuid
+graphviz
+cloud-tpu-client
 tensorflow==2.8.0
 tensorflow-datasets
 matplotlib
