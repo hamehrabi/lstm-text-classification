@@ -1,0 +1,101 @@
+{
+      "2023-03-29-13-44-17": {
+            "experiment_id": "87f4bcb5-bf59-4507-894f-7658b71673f3",
+            "execution_start_time": "2023-03-29-13-44-17",
+            "execution_stop_time": "2023-03-29-14-14-14",
+            "execution_time_in_ms": 472632,
+            "config_information": {
+                  "data_set": {
+                        "name": "imdb_reviews",
+                        "schema_file_path": "dataset_schema.yaml",
+                        "buffer_size": 1000,
+                        "batch_size": 32
+                  },
+                  "preprocessing": {
+                        "vocab_size": 1500
+                  },
+                  "train_config": {
+                        "model_root_dir": "model",
+                        "model_save_dir": "trained_model/saved_model",
+                        "model_checkpoint_dir": "checkpoint_dir/cp.cpkt",
+                        "epoch": 2,
+                        "tensorboard_log_dir": "tensor_board_log_dir",
+                        "base_accuracy": 0.6,
+                        "validation_step": 30
+                  },
+                  "model_eval_config": {
+                        "change_threshold": 0.001
+                  },
+                  "model_deployment": {
+                        "model_serving_dir": "lstm_text_classification/saved_models"
+                  },
+                  "training_pipeline_config": {
+                        "artifact_dir": "artifacts",
+                        "training_pipeline_obj_dir": "training_pipeline",
+                        "training_pipeline_obj_file_name": "training_pipeline.pkl",
+                        "execution_report_dir": "execution_report",
+                        "execution_report_file_name": "execution_report.json"
+                  }
+            },
+            "executed_by_user": null,
+            "executed_by_email_id": null,
+            "execution_status": true,
+            "data_ingestion": {
+                  "status": true,
+                  "message": "\nTraining pipeline initialized\nModel Created.\nStarted saving training pipeline execution report.",
+                  "data_config": {
+                        "name": "imdb_reviews",
+                        "schema": {
+                              "column_1": "string",
+                              "column_2": "int"
+                        },
+                        "buffer_size": 1000,
+                        "batch_size": 32
+                  }
+            },
+            "data_preprocessing": {
+                  "status": true,
+                  "message": "Data Preprocessing is initialized.\nEncoder object has been initialized.",
+                  "preprocessing_config": {
+                        "vocal_size": 1500
+                  }
+            },
+            "model_training": {
+                  "status": true,
+                  "message": "\nModel trainer initialized\nModel not loaded. Model dir[G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\checkpoint_dir/cp.cpkt not exists.]\nModel compiled successfully.\nModel architecture created.\n Model training begin.\nModel trained.\nSaving model in dir: [G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\trained_model/saved_model]\nModel saved in dir: [G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\trained_model/saved_model]",
+                  "is_model_trained": true,
+                  "is_model_architecture_created": true,
+                  "model_training_accuracy": 0.8756800293922424,
+                  "model_testing_accuracy": 0.862559974193573,
+                  "model_training_loss": 0.3003315031528473,
+                  "model_testing_loss": 0.31955036520957947,
+                  "training_config": {
+                        "model_save_dir": "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\trained_model/saved_model",
+                        "model_checkpoint_dir": "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\checkpoint_dir/cp.cpkt",
+                        "model_root_dir": "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model",
+                        "epoch": 2,
+                        "tensorboard_log_dir": "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\artifacts\\87f4bcb5-bf59-4507-894f-7658b71673f3\\model\\tensor_board_log_dir",
+                        "base_accuracy": 0.6,
+                        "validation_step": 30
+                  }
+            },
+            "model_evaluation": {
+                  "status": true,
+                  "message": "Model Evaluation object has been initialized.\nTraining model metric: MetricInfoEntity(train_accuracy=0.8756800293922424,train_loss=0.8756800293922424,test_accuracy=0.862559974193573,test_loss=0.31955036520957947)\nBest model metric: None\nWe have not found any of the existing model to compare with trained model",
+                  "is_trained_model_accepted": true,
+                  "model_eval_config": [
+                        0.001
+                  ],
+                  "improved_factor": null,
+                  "compared_model_path": null
+            },
+            "model_deployment": {
+                  "status": true,
+                  "message": "Model deployment object initialized.\nExporting model in dir: [G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\lstm_text_classification/saved_models\\20230329141402]\nExported model in dir: [G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\lstm_text_classification/saved_models\\20230329141402]",
+                  "model_deployment_config": [
+                        "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\lstm_text_classification/saved_models"
+                  ],
+                  "model_serving_dir": "G:\\AIOps-Documents-Tutorials\\LSTM-Text-Classification\\LSTM-AIOPS\\lstm-text-classification\\lstm_text_classification/saved_models\\20230329141402"
+            }
+      }
+}
