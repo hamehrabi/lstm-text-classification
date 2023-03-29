@@ -1,7 +1,7 @@
 Flask
 gunicorn
 pyyaml
-tensorflow
+tensorflow==2.8.0
 tensorflow-datasets
 matplotlib
 -e .
