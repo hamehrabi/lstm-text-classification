@@ -128,3 +128,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Artifacts
+/artifacts
+/lstm_text_classification.egg-info
+/lstm_text_classification
