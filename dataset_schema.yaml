@@ -1,0 +1,4 @@
+file_extension: .tfrecord
+schema:
+  column_1: string
+  column_2: int
