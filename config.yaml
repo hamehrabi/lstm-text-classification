@@ -1,23 +1,35 @@
 
+
 data_set:
   name: imdb_reviews
   schema_file_path: dataset_schema.yaml
-  buffer_size: 10000
-  batch_size: 64
+  buffer_size: 1000
+  batch_size: 32
 
 
 preprocessing:
-  vocab_size: 1000
+  vocab_size: 1500
+
 
 train_config:
   model_root_dir: model
   model_save_dir: trained_model/saved_model
-  model_checkpoint_dir: checkpoint_dir
-  epoch: 10
+  model_checkpoint_dir: checkpoint_dir/cp.cpkt
+  epoch: 2
   tensorboard_log_dir: tensor_board_log_dir
   base_accuracy: 0.6
   validation_step: 30
 
 
+model_eval_config:
+  change_threshold: 0.001 #new y>=x+(x*0.00.1) x is old model accuracy and y is new model accuracy
+
+model_deployment:
+  model_serving_dir: lstm_text_classification/saved_models
+
 training_pipeline_config:
   artifact_dir: artifacts
+  training_pipeline_obj_dir: training_pipeline
+  training_pipeline_obj_file_name: training_pipeline.pkl
+  execution_report_dir: execution_report
+  execution_report_file_name: execution_report.json
